@@ -13,8 +13,8 @@ MONGODB_URI = os.getenv("MONGODB_URI")
 MONGODB_DB = os.getenv("MONGODB_DB", "cs3720db")
 PORT = int(os.getenv("PORT", "8000"))
 
-if not MONGO_URI:
-    raise ValueError("MONGO_URI is missing. Check your .env file.")
+if not MONGODB_URI:
+    raise ValueError("MONGODB_URI is missing. Check your .env file.")
 
 # Connect to MongoDB
 client = MongoClient(MONGODB_URI)
